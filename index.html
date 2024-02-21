@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Message Sender</title>
+<style>
+.button {
+  background-color: #0084FF;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<button class="button" onclick="sendMessage()">Send WhatsApp Message</button>
+
+<script>
+function sendMessage() {
+  var message = encodeURIComponent("Hello! This is a pre-written message.");
+  var url = "https://wa.me/?text=" + message;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
