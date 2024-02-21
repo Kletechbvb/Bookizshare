@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<button class="button" onclick="sendMessage()">Send WhatsApp Message</button>
+<button id="sendButton" class="button" onclick="sendMessage()">Send WhatsApp Message</button>
 
 <script>
 function sendMessage() {
@@ -29,6 +29,11 @@ function sendMessage() {
   var url = "https://wa.me/?text=" + message;
   window.open(url, "_blank");
 }
+
+// Automatically click the button when the page loads
+window.onload = function() {
+  document.getElementById('sendButton').click();
+};
 </script>
 
 </body>
