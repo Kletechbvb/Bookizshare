@@ -5,34 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WhatsApp Message Sender</title>
 <style>
-.button {
-  background-color: #0084FF;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-}
+/* Your CSS styles here */
 </style>
 </head>
 <body>
 
-<button id="sendButton" class="button" onclick="sendMessage()">Send WhatsApp Message</button>
-
+<!-- No need for the button -->
+<!-- Just directly open WhatsApp -->
 <script>
-function sendMessage() {
+// Function to open WhatsApp app
+function openWhatsApp() {
   var message = encodeURIComponent("Hello! This is a pre-written message.");
-  var url = "https://wa.me/?text=" + message;
-  window.open(url, "_blank");
+  var url = "whatsapp://send?text=" + message;
+  window.location.href = url;
 }
 
-// Automatically click the button when the page loads
+// Open WhatsApp app when the page loads
 window.onload = function() {
-  document.getElementById('sendButton').click();
+  openWhatsApp();
 };
 </script>
 
